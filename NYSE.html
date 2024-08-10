@@ -126,8 +126,98 @@
 
             <!-- Revenue trend graph placeholder -->
             <figure>
-                <img src="path_to_revenue_trend_graph.jpg" alt="Revenue trend from 2003-2017">
-                <figcaption>Line graph showing the revenue trend from 2003-2017, highlighting the 2015 dip</figcaption>
+                <!-- Section to display the Revenue and Ticker Symbol Count by Year -->
+<section>
+    <h2>Revenue and Ticker Symbol Count by Year</h2>
+    
+    <!-- HTML Table to display the data -->
+    <table>
+        <!-- Table Header: Contains the column names -->
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Sum of Total Revenue</th>
+                <th>Count of Ticker Symbol</th>
+            </tr>
+        </thead>
+        
+        <!-- Table Body: Contains the actual data rows -->
+        <tbody>
+            <tr>
+                <td>2012</td>
+                <td>$4.123T</td>
+                <td>226</td>
+            </tr>
+            <tr>
+                <td>2013</td>
+                <td>$8.548T</td>
+                <td>421</td>
+            </tr>
+            <tr>
+                <td>2014</td>
+                <td>$8.826T</td>
+                <td>418</td>
+            </tr>
+            <tr>
+                <td>2015</td>
+                <td>$8.699T</td>
+                <td>427</td>
+            </tr>
+            <tr>
+                <td>2016</td>
+                <td>$5.235T</td>
+                <td>213</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- CSS to style the table -->
+<style>
+    /* General table styling */
+    table {
+        width: 100%; /* Make the table width 100% of its container */
+        border-collapse: collapse; /* Remove gaps between cells */
+        margin: 20px 0; /* Add space around the table */
+        font-size: 18px; /* Set font size for table content */
+        text-align: left; /* Align text to the left */
+    }
+
+    /* Padding for table headers and data cells */
+    table th, table td {
+        padding: 12px 15px; /* Add padding inside table cells */
+    }
+
+    /* Styling for the header row */
+    table thead tr {
+        background-color: #009879; /* Set background color for header */
+        color: #ffffff; /* Set text color to white */
+        text-align: left; /* Align text to the left */
+        font-weight: bold; /* Make header text bold */
+    }
+
+    /* Styling for the body rows */
+    table tbody tr {
+        border-bottom: 1px solid #dddddd; /* Add a border below each row */
+    }
+
+    /* Alternating row color for even rows */
+    table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3; /* Set background color for even rows */
+    }
+
+    /* Styling for the last row */
+    table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879; /* Thicker border for the last row */
+    }
+
+    /* Hover effect for table rows */
+    table tbody tr:hover {
+        background-color: #f1f1f1; /* Change background color on hover */
+    }
+</style>
+
+                <figcaption>Table showing the revenue trend from 2012-2016, highlighting the 2015 dip</figcaption>
             </figure>
 
             <ol start="3">
@@ -256,25 +346,25 @@ function showSlides(n) {
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
+<section>
+    <h2>Get in touch</h2>
+    <form method="post" action="https://formspree.io/f/xvgprbvd">
+        <div class="fields">
+            <div class="field half">
+                <input type="text" name="name" id="name" placeholder="Name" required />
+            </div>
+            <div class="field half">
+                <input type="email" name="email" id="email" placeholder="Email" required />
+            </div>
+            <div class="field">
+                <textarea name="message" id="message" placeholder="Message" required></textarea>
+            </div>
+        </div>
+        <ul class="actions">
+            <li><input type="submit" value="Send" class="primary" /></li>
+        </ul>
+    </form>
+</section>
 							<section>
 								<h2>Follow</h2>
 								<ul class="icons">
