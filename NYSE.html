@@ -146,9 +146,107 @@
         <!-- Placeholder for deck slides -->
 <section>
     <h2>Presentation Deck</h2>
-    <iframe src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/images/NYSE%20Deck.pdf" width="100%" height="600px" style="border:none;"></iframe>
+    <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide1.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide2.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide3.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide4.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide5.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide6.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide7.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide8.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide9.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide10.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/NYSE%20Deck/Slide11.JPG?raw=true" style="width:100%">
+        </div>
+
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
 </section>
-        </section>
+
+<!-- Slideshow CSS -->
+<style>
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+</style>
+
+<!-- Slideshow JavaScript -->
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</section>
 
 						</div>
 					</div>
