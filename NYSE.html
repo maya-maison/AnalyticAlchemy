@@ -209,10 +209,11 @@
   margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
+  font-size: 36px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   border-radius: 0 3px 3px 0;
   user-select: none;
+  z-index: 1000; /* Ensure arrows are on top */
 }
 
 .next {
@@ -221,7 +222,11 @@
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev:focus, .next:focus {
+  outline: none; /* Remove focus outline */
 }
 </style>
 
@@ -245,9 +250,6 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
 }
 </script>
-
-</section>
-
 						</div>
 					</div>
 
