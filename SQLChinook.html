@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Maya Maison Portfolio - SQL Music Store Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>SQL Music Store Analysis</h1>
+							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+						<main>
+        <section>
+            <p>In this project, I conducted a comprehensive analysis of a music store's database using SQL queries. The goal was to extract valuable insights about customer behavior, sales trends, and artist performance to inform business decisions and strategies.</p>
+        </section>
+
+        <section>
+            <h2>Project Overview and Approach</h2>
+            <p>The analysis involved writing complex SQL queries to answer specific business questions. My approach included:</p>
+            
+            <ol>
+                <li>
+                    <h3>Query Development:</h3>
+                    <p>I wrote error-free SQL queries incorporating JOINs and aggregations to extract meaningful data from the database.</p>
+                </li>
+
+                <li>
+                    <h3>Data Visualization:</h3>
+                    <p>I created clear and informative visualizations to present the findings from the SQL queries.</p>
+                </li>
+
+                <li>
+                    <h3>Insight Generation:</h3>
+                    <p>I analyzed the data to identify trends, patterns, and key insights about customer behavior and sales performance.</p>
+                </li>
+
+                <li>
+                    <h3>Presentation:</h3>
+                    <p>I compiled the findings into a comprehensive presentation, ensuring clear communication of the insights.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Key Findings and Insights</h2>
+            <p>Through this analysis, I uncovered several important insights:</p>
+
+            <ol>
+                <li>
+                    <h3>Top Customers:</h3>
+                    <p>Identified the top 5 customers by lifetime value, providing insights into the most valuable customer segments.</p>
+                </li>
+
+                <li>
+                    <h3>Genre Preferences:</h3>
+                    <p>Analyzed the genres that top customers spent the most on, with Rock being the highest grossing genre among the top 5 customers.</p>
+                </li>
+
+                <li>
+                    <h3>Revenue Trends:</h3>
+                    <p>Identified months where revenue exceeded the yearly average, revealing a seasonality in revenue peaks occurring roughly every 13 months.</p>
+                </li>
+
+                <li>
+                    <h3>Artist Performance:</h3>
+                    <p>Analyzed the second highest-selling artist (U2) and the performance of their individual albums, revealing significant variations in album sales.</p>
+                </li>
+            </ol>
+        </section>
+
+<section>
+    <h2>Presentation Deck</h2>
+    <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/sql-project-submission-Maya%20Maison/Slide1.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/sql-project-submission-Maya%20Maison/Slide2.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/sql-project-submission-Maya%20Maison/Slide3.JPG?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/sql-project-submission-Maya%20Maison/Slide4.JPG?raw=true" style="width:100%">
+        </div>
+
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+</section>
+
+<!-- Slideshow CSS -->
+<style>
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 80vh;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 1000;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev:focus, .next:focus {
+  outline: none;
+}
+</style>
+
+<!-- Slideshow JavaScript -->
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+              
+
+<!-- SQL Queries Section -->
+        <section>
+            <h2>SQL Queries</h2>
+            <p>Here are the SQL queries used in this analysis:</p>
+            <pre><code>
+-- Who are the top 5 customers, by lifetime value?
+SELECT c.CustomerId, 
+    c.FirstName || ' ' || c.LastName AS FullName,
+    SUM(i.Total) AS ltv
+FROM Invoice AS i
+JOIN Customer AS c
+ON i.CustomerId = c.CustomerId
+GROUP BY c.CustomerId, FullName
+ORDER BY ltv DESC
+LIMIT 5;
+
+-- Which genres have they spent the most on?
+WITH cust AS 
+    (SELECT c.CustomerId, 
+        c.FirstName || ' ' || c.LastName AS FullName,
+        SUM(i.Total) AS ltv
+    FROM Invoice AS i
+    JOIN Customer AS c
+    ON i.CustomerId = c.CustomerId
+    GROUP BY c.CustomerId, FullName
+    ORDER BY ltv DESC
+    LIMIT 5),
+
+genre_spend AS
+    (SELECT i.CustomerId,
+        g.Name AS GenreName, 
+        SUM(il.UnitPrice * il.Quantity) AS TotalSpent
+    FROM Invoice AS i 
+    JOIN InvoiceLine AS il 
+    ON i.InvoiceId = il.InvoiceId
+    JOIN Track AS t 
+    ON il.TrackId = t.TrackId
+    JOIN Genre AS g 
+    ON t.GenreId = g.GenreId
+    GROUP BY i.CustomerId, GenreName
+    ORDER BY TotalSpent DESC)
+
+SELECT   
+    gs.GenreName, 
+    SUM(gs.TotalSpent) AS Top5Spend
+FROM genre_spend AS gs
+JOIN cust AS c
+ON gs.CustomerId = c.CustomerId
+GROUP BY gs.GenreName
+ORDER BY Top5Spend DESC;
+
+-- Which months had a revenue exceeding the yearly average by more than .2?
+WITH lt AS 
+    (SELECT
+        strftime('%Y', i.InvoiceDate) AS InvYear,
+        strftime('%m-%Y', i.InvoiceDate) AS InvDate,
+        SUM(il.Quantity) AS qty,
+        SUM(il.UnitPrice * il.Quantity) AS month_rev
+    FROM Invoice AS i
+    JOIN InvoiceLine AS il
+    ON i.InvoiceId = il.InvoiceId
+    GROUP BY InvDate),
+
+yr_avg AS 
+    (SELECT
+        InvYear,
+        AVG(month_rev) AS avg_rev_yr
+    FROM lt
+    GROUP BY InvYear),
+
+over_avg AS 
+    (SELECT 
+        lt.InvDate,
+        lt.qty,
+        lt.month_rev,
+        AVG(lt.month_rev) OVER (PARTITION BY lt.InvYear ORDER BY lt.InvDate) AS avg_sales
+    FROM lt
+    JOIN yr_avg AS ya 
+    ON lt.InvYear = ya.InvYear
+    WHERE lt.month_rev > ya.avg_rev_yr+.2)
+
+SELECT
+    InvDate,
+    month_rev
+FROM over_avg;
+
+-- Who is the second highest selling artist, and how much did each of their albums gross?
+WITH album_info AS 
+    (SELECT 
+        t.AlbumId, 
+        a.Title AS AlbumName,
+        ar.ArtistID, 
+        ar.Name AS ArtistName,
+        il.UnitPrice, 
+        SUM(il.Quantity) AS QTY,
+        il.UnitPrice * SUM(il.Quantity) AS total_price
+    FROM Invoice AS i
+    JOIN InvoiceLine AS il ON i.InvoiceId = il.InvoiceId
+    JOIN Track AS t ON il.TrackId = t.TrackId
+    JOIN Album AS a ON a.AlbumId = t.AlbumId
+    JOIN Artist AS ar ON ar.ArtistId = a.ArtistId
+    GROUP BY 
+        t.AlbumId, 
+        AlbumName,
+        ar.ArtistID, 
+        ArtistName),
+
+artist_sales AS 
+    (SELECT 
+        ArtistID,
+        ArtistName,
+        SUM(total_price) AS total_sales,
+        RANK() OVER (ORDER BY SUM(total_price) DESC) AS artist_rank
+    FROM album_info
+    GROUP BY ArtistID, ArtistName)
+
+SELECT
+    ai.ArtistName,
+    ai.AlbumName,
+    ai.total_price AS album_sales
+FROM album_info AS ai
+JOIN artist_sales AS ar
+ON ai.ArtistID = ar.ArtistID
+WHERE ar.artist_rank = 2
+ORDER BY
+    album_sales DESC;
+            </code></pre>
+        </section>
+
+        <!-- Slideshow CSS and JavaScript would be included here, similar to the previous project -->
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+                            <section>
+                                <h2>Get in touch</h2>
+                                <form method="post" action="https://formspree.io/f/xvgprbvd">
+                                    <div class="fields">
+                                        <div class="field half">
+                                            <input type="text" name="name" id="name" placeholder="Name" required />
+                                        </div>
+                                        <div class="field half">
+                                            <input type="email" name="email" id="email" placeholder="Email" required />
+                                        </div>
+                                        <div class="field">
+                                            <textarea name="message" id="message" placeholder="Message" required></textarea>
+                                        </div>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Send" class="primary" /></li>
+                                    </ul>
+                                </form>
+                            </section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
