@@ -1,1 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Maya Maison Portfolio - Digital Marketing Performance Optimization</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Digital Marketing Performance Optimization</h1>
+							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+						<main>
+        <section>
+            <p>This project demonstrates the application of digital marketing analytics to improve campaign performance and drive business results. Using Google Analytics data from Google's official merchandise store (shop.merch.google), I conducted an in-depth analysis of audience behavior, traffic sources, and conversion patterns.</p>
+        </section>
+
+        <section>
+            <h2>Project Overview</h2>
+            <p>The main objectives of this project were to:</p>
+            <ul>
+                <li>Analyze audience segments and their characteristics</li>
+                <li>Evaluate the effectiveness of various marketing channels</li>
+                <li>Analyze the user journey and identify drop-off points</li>
+                <li>Track and interpret essential KPIs for digital marketing success</li>
+                <li>Propose data-driven optimizations to enhance marketing ROI</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Methodology</h2>
+            <p>The analysis was conducted using Google Analytics data from the Google Merchandise Store. I employed various analytical techniques to extract insights, including:</p>
+            <ul>
+                <li>Audience segmentation analysis</li>
+                <li>Traffic source evaluation</li>
+                <li>Conversion funnel analysis</li>
+                <li>Key performance indicator (KPI) tracking</li>
+            </ul>
+            <p>Findings and recommendations are presented in a comprehensive slide deck, showcasing the ability to extract meaningful insights from real-world data sets and communicate them effectively to stakeholders.</p>
+        </section>
+
+        <section>
+            <h2>Key Findings</h2>
+            <p>Through this analysis, several significant insights were uncovered:</p>
+            <ul>
+                <li>Identification of high-value audience segments</li>
+                <li>Evaluation of channel performance and ROI</li>
+                <li>Discovery of key drop-off points in the user journey</li>
+                <li>Recommendations for optimizing marketing strategies</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Skills Demonstrated</h2>
+            <ul>
+                <li>Data analysis and interpretation</li>
+                <li>Google Analytics proficiency</li>
+                <li>Strategic thinking and problem-solving</li>
+                <li>Data visualization and presentation</li>
+                <li>Marketing performance optimization</li>
+            </ul>
+        </section>
+
+        <!-- Presentation Deck -->
+        <section>
+            <h2>Presentation Deck</h2>
+            <div class="slideshow-container">
+                <!-- Slides -->
+                <!-- Repeat this div for all 24 slides -->
+                <div class="mySlides">
+                    <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/Google%20Store/Slide1.JPG?raw=true" style="width:100%">
+                </div>
+                <!-- ... -->
+                <div class="mySlides">
+                    <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/Google%20Store/Slide24.JPG?raw=true" style="width:100%">
+                </div>
+
+                <!-- Navigation Arrows -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <!-- Slideshow CSS -->
+        <style>
+        .slideshow-container {
+          position: relative;
+          max-width: 100%;
+          margin: auto;
+        }
+
+        .mySlides {
+          display: none;
+        }
+
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 36px;
+          background-color: rgba(0, 0, 0, 0.5);
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          z-index: 1000;
+        }
+
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev:focus, .next:focus {
+          outline: none;
+        }
+        </style>
+
+        <!-- Slideshow JavaScript -->
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          slides[slideIndex-1].style.display = "block";  
+        }
+        </script>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+                            <section>
+                                <h2>Get in touch</h2>
+                                <form method="post" action="https://formspree.io/f/xvgprbvd">
+                                    <div class="fields">
+                                        <div class="field half">
+                                            <input type="text" name="name" id="name" placeholder="Name" required />
+                                        </div>
+                                        <div class="field half">
+                                            <input type="email" name="email" id="email" placeholder="Email" required />
+                                        </div>
+                                        <div class="field">
+                                            <textarea name="message" id="message" placeholder="Message" required></textarea>
+                                        </div>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Send" class="primary" /></li>
+                                    </ul>
+                                </form>
+                            </section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
