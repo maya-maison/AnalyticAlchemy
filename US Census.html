@@ -39,7 +39,7 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Tableau US Census Demographic Analysis</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="US Census Data Visualization" /></span>
+							<span class="image main"><img src="images/placeholder.jpg" alt="US Census Data Visualization" /></span>
 						<main>
         <section>
             <p>In this project, I conducted a comprehensive analysis of US Census data using Tableau. The goal was to extract valuable insights about demographic trends, poverty, employment, accessibility, and job type distribution across different regions of the United States.</p>
@@ -74,92 +74,37 @@
 
         <section>
             <h2>Key Findings and Insights</h2>
-            <p>Through this analysis, I uncovered several important insights:</p>
 
-            <ol>
-                <li>
-                    <h3>Poverty and Employment:</h3>
-                    <p>Explored the relationship between employment rates and poverty levels across different US regions, revealing unexpected patterns.</p>
-                </li>
+            <h3>Insight 1: US Census Analysis - Poverty Spread</h3>
+            <p>I wanted to see if there was any correlation between employment and poverty. From this dashboard, we can see a few things. The least employed division is the East South Central region of the US, as indicated on the Employed Population by Area map, with an employment rate of 38.59% of the division's population. The East South Central division is comprised of Alabama, Kentucky, Mississippi, and Tennessee, according to the <a href="https://www2.census.gov/geo/pdfs/reference/GARM/Ch6GARM.pdf" target="_blank">Statistical Grouping of States and Counties</a> from the US Census Bureau. It is also one of the least populated regions, with a total population of 18,715,669 people, as seen on the Total Population by Area map.</p>
+            <p>If we look at a comparably populated division, New England (comprised of Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont), with a population of 14,632,374, we can see that New England has one of the highest rates of employment, with an employment rate of 49.58% of the division's population. Several factors may drive this, including the unknown ratio of children under the age of 16 included in each population.</p>
+            <p>When we look at poverty and child poverty counts against the population, we might expect that a more employed population would have less poverty. However, apart from Vermont, every other state in the New England division has a greater rate of both poverty and child poverty compared to the East South Central region.</p>
+            <p>For this dashboard, I opted to use maps to visualize employed population against the total population. I chose a scatter plot to view poverty and child poverty again the total population size. To look at the distribution and spread between unemployment and poverty, I chose box and whisker plots.</p>
+            <a href="https://public.tableau.com/app/profile/maya.maison/viz/USCensusAnalysis_17205486154900/PovertySpread?publish=yes" target="_blank">View Tableau Visualization</a>
 
-                <li>
-                    <h3>Accessibility Scores:</h3>
-                    <p>Developed a scoring system to determine areas with the greatest level of accessibility based on commute times and transportation modes.</p>
-                </li>
+            <h3>Insight 2: US Census Accessibility</h3>
+            <p>I wanted to determine which area had the greatest level of accessibility. To answer this question, I created a scoring system segmented by quartile, with the highest possible score being 12. Scores were based on Commute Time (where lower times received higher scores), and Walk and Transit (where greater numbers of people using these transportation modalities received higher scores).</p>
+            <p>The Western Region dominated. When looking more granularly, the Pacific Division of the Western Region had the highest score. Observing at the state level, Massachusetts had the highest score.</p>
+            <p>To view the scores I made, based on segments, I opted to view them in bar graphs.</p>
+            <a href="https://public.tableau.com/app/profile/maya.maison/viz/USCensusAccessibility/Accessibility?publish=yes" target="_blank">View Tableau Visualization</a>
 
-                <li>
-                    <h3>Job Type Distribution:</h3>
-                    <p>Analyzed the distribution of job types across different states and regions, identifying subtle variations and dominant job categories.</p>
-                </li>
-            </ol>
+            <h3>Insight 3: US Census Job Type Distribution</h3>
+            <p>I wanted to see if there was a difference in job type distribution among the different regions. The difference does not become apparent until state-level granularity, and it seems to occur mainly in some of the smaller states. Even at this level, for most states, the difference was between Production and Construction jobs, with Production slightly outnumbering Construction jobs, as seen in Wyoming. Apart from this, Professional, Office, and then Service jobs were the most dominant.</p>
+            <p>To view the distribution of job types, I opted to utilize stacked bar graphs.</p>
+            <a href="https://public.tableau.com/app/profile/maya.maison/viz/USCensusJobTypeDistribution/JobTypeDistribution?publish=yes" target="_blank">View Tableau Visualization</a>
         </section>
 
         <section>
             <h2>Tableau Visualizations</h2>
             <div class="tableau-embed">
                 <h3>Insight 1: US Census Analysis - Poverty Spread</h3>
-                <div class='tableauPlaceholder' id='viz1720548615490' style='position: relative'>
-                    <noscript><a href='#'><img alt='Poverty Spread ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USCensusAnalysis_17205486154900&#47;PovertySpread&#47;1_rss.png' style='border: none' /></a></noscript>
-                    <object class='tableauViz'  style='display:none;'>
-                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                        <param name='embed_code_version' value='3' />
-                        <param name='site_root' value='' />
-                        <param name='name' value='USCensusAnalysis_17205486154900&#47;PovertySpread' />
-                        <param name='tabs' value='no' />
-                        <param name='toolbar' value='yes' />
-                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USCensusAnalysis_17205486154900&#47;PovertySpread&#47;1.png' />
-                        <param name='animate_transition' value='yes' />
-                        <param name='display_static_image' value='yes' />
-                        <param name='display_spinner' value='yes' />
-                        <param name='display_overlay' value='yes' />
-                        <param name='display_count' value='yes' />
-                        <param name='language' value='en-US' />
-                        <param name='filter' value='publish=yes' />
-                    </object>
-                </div>
-                <p>This visualization explores the relationship between employment rates and poverty levels across different US regions.</p>
+                <iframe src="https://public.tableau.com/views/USCensusAnalysis_17205486154900/PovertySpread?:showVizHome=no&:embed=true" width="100%" height="600" frameborder="0"></iframe>
                 
                 <h3>Insight 2: US Census Accessibility</h3>
-                <div class='tableauPlaceholder' id='viz1720548615491' style='position: relative'>
-                    <noscript><a href='#'><img alt='Accessibility ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USCensusAccessibility&#47;Accessibility&#47;1_rss.png' style='border: none' /></a></noscript>
-                    <object class='tableauViz'  style='display:none;'>
-                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                        <param name='embed_code_version' value='3' />
-                        <param name='site_root' value='' />
-                        <param name='name' value='USCensusAccessibility&#47;Accessibility' />
-                        <param name='tabs' value='no' />
-                        <param name='toolbar' value='yes' />
-                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USCensusAccessibility&#47;Accessibility&#47;1.png' />
-                        <param name='animate_transition' value='yes' />
-                        <param name='display_static_image' value='yes' />
-                        <param name='display_spinner' value='yes' />
-                        <param name='display_overlay' value='yes' />
-                        <param name='display_count' value='yes' />
-                        <param name='language' value='en-US' />
-                    </object>
-                </div>
-                <p>This visualization presents a scoring system to determine areas with the greatest level of accessibility based on commute times and transportation modes.</p>
+                <iframe src="https://public.tableau.com/views/USCensusAccessibility/Accessibility?:showVizHome=no&:embed=true" width="100%" height="600" frameborder="0"></iframe>
                 
                 <h3>Insight 3: US Census Job Type Distribution</h3>
-                <div class='tableauPlaceholder' id='viz1720548615492' style='position: relative'>
-                    <noscript><a href='#'><img alt='Job Type Distribution ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USCensusJobTypeDistribution&#47;JobTypeDistribution&#47;1_rss.png' style='border: none' /></a></noscript>
-                    <object class='tableauViz'  style='display:none;'>
-                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                        <param name='embed_code_version' value='3' />
-                        <param name='site_root' value='' />
-                        <param name='name' value='USCensusJobTypeDistribution&#47;JobTypeDistribution' />
-                        <param name='tabs' value='no' />
-                        <param name='toolbar' value='yes' />
-                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USCensusJobTypeDistribution&#47;JobTypeDistribution&#47;1.png' />
-                        <param name='animate_transition' value='yes' />
-                        <param name='display_static_image' value='yes' />
-                        <param name='display_spinner' value='yes' />
-                        <param name='display_overlay' value='yes' />
-                        <param name='display_count' value='yes' />
-                        <param name='language' value='en-US' />
-                    </object>
-                </div>
-                <p>This visualization analyzes the distribution of job types across different states and regions, identifying subtle variations and dominant job categories.</p>
+                <iframe src="https://public.tableau.com/views/USCensusJobTypeDistribution/JobTypeDistribution?:showVizHome=no&:embed=true" width="100%" height="600" frameborder="0"></iframe>
             </div>
         </section>
 
