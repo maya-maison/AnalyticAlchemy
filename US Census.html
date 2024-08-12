@@ -1,75 +1,153 @@
-<div id="main">
-    <div class="inner">
-        <h1>Tableau US Census Demographic Analysis</h1>
-        <span class="image main"><img src="images/placeholder.jpg" alt="US Census Data Visualization" /></span>
-    <main>
-    <section>
-        <p>In this project, I conducted a comprehensive analysis of US Census data using Tableau. The goal was to extract valuable insights about demographic trends, poverty, employment, accessibility, and job type distribution across different regions of the United States.</p>
-    </section>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Maya Maison Portfolio - Tableau US Census Demographic Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    <section>
-        <h2>Project Overview and Approach</h2>
-        <p>The analysis involved creating various visualizations in Tableau to answer specific questions about US demographics. My approach included:</p>
-        
-        <ol>
-            <li>
-                <h3>Data Visualization:</h3>
-                <p>I created clear and informative visualizations using Tableau to present findings from the US Census data.</p>
-            </li>
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+						</div>
+					</header>
 
-            <li>
-                <h3>Insight Generation:</h3>
-                <p>I analyzed the data to identify trends, patterns, and key insights about poverty, employment, accessibility, and job distribution across different US regions.</p>
-            </li>
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
 
-            <li>
-                <h3>Interactive Dashboards:</h3>
-                <p>I developed interactive Tableau dashboards to allow for deeper exploration of the data.</p>
-            </li>
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Tableau US Census Demographic Analysis</h1>
+							<span class="image main"><img src="images/placeholder.jpg" alt="US Census Data Visualization" /></span>
+						<main>
+        <section>
+            <p>In this project, I conducted a comprehensive analysis of US Census data using Tableau. The goal was to extract valuable insights about demographic trends, poverty, employment, accessibility, and job type distribution across different regions of the United States.</p>
+        </section>
 
-            <li>
-                <h3>Analysis and Interpretation:</h3>
-                <p>I provided detailed interpretations of the visualizations, explaining the significance of the findings and their potential implications.</p>
-            </li>
-        </ol>
-    </section>
+        <section>
+            <h2>Project Overview and Approach</h2>
+            <p>The analysis involved creating various visualizations in Tableau to answer specific questions about US demographics. My approach included:</p>
+            
+            <ol>
+                <li>
+                    <h3>Data Visualization:</h3>
+                    <p>I created clear and informative visualizations using Tableau to present findings from the US Census data.</p>
+                </li>
 
-    <section>
-        <h2>Key Findings and Insights</h2>
+                <li>
+                    <h3>Insight Generation:</h3>
+                    <p>I analyzed the data to identify trends, patterns, and key insights about poverty, employment, accessibility, and job distribution across different US regions.</p>
+                </li>
 
-        <h3>Insight 1: US Census Analysis - Poverty Spread</h3>
-        <p>I wanted to see if there was any correlation between employment and poverty. From this dashboard, we can see a few things. The least employed division is the East South Central region of the US, as indicated on the Employed Population by Area map, with an employment rate of 38.59% of the division's population. The East South Central division is comprised of Alabama, Kentucky, Mississippi, and Tennessee, according to the <a href="https://www2.census.gov/geo/pdfs/reference/GARM/Ch6GARM.pdf" target="_blank">Statistical Grouping of States and Counties</a> from the US Census Bureau. It is also one of the least populated regions, with a total population of 18,715,669 people, as seen on the Total Population by Area map.</p>
-        <p>If we look at a comparably populated division, New England (comprised of Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont), with a population of 14,632,374, we can see that New England has one of the highest rates of employment, with an employment rate of 49.58% of the division's population. Several factors may drive this, including the unknown ratio of children under the age of 16 included in each population.</p>
-        <p>When we look at poverty and child poverty counts against the population, we might expect that a more employed population would have less poverty. However, apart from Vermont, every other state in the New England division has a greater rate of both poverty and child poverty compared to the East South Central region.</p>
-        <p>For this dashboard, I opted to use maps to visualize employed population against the total population. I chose a scatter plot to view poverty and child poverty again the total population size. To look at the distribution and spread between unemployment and poverty, I chose box and whisker plots.</p>
-        <a href="https://public.tableau.com/app/profile/maya.maison/viz/USCensusAnalysis_17205486154900/PovertySpread?publish=yes" target="_blank">View Tableau Visualization</a>
-        <div class="tableau-embed">
-            <iframe src="https://public.tableau.com/views/USCensusAnalysis_17205486154900/PovertySpread?:showVizHome=no&:embed=true" width="100%" height="600" frameborder="0"></iframe>
-        </div>
+                <li>
+                    <h3>Interactive Dashboards:</h3>
+                    <p>I developed interactive Tableau dashboards to allow for deeper exploration of the data.</p>
+                </li>
 
-        <h3>Insight 2: US Census Accessibility</h3>
-        <p>I wanted to determine which area had the greatest level of accessibility. To answer this question, I created a scoring system segmented by quartile, with the highest possible score being 12. Scores were based on Commute Time (where lower times received higher scores), and Walk and Transit (where greater numbers of people using these transportation modalities received higher scores).</p>
-        <p>The Western Region dominated. When looking more granularly, the Pacific Division of the Western Region had the highest score. Observing at the state level, Massachusetts had the highest score.</p>
-        <p>To view the scores I made, based on segments, I opted to view them in bar graphs.</p>
-        <a href="https://public.tableau.com/app/profile/maya.maison/viz/USCensusAccessibility/Accessibility?publish=yes" target="_blank">View Tableau Visualization</a>
-        <div class="tableau-embed">
-            <iframe src="https://public.tableau.com/views/USCensusAccessibility/Accessibility?:showVizHome=no&:embed=true" width="100%" height="600" frameborder="0"></iframe>
-        </div>
+                <li>
+                    <h3>Analysis and Interpretation:</h3>
+                    <p>I provided detailed interpretations of the visualizations, explaining the significance of the findings and their potential implications.</p>
+                </li>
+            </ol>
+        </section>
 
-        <h3>Insight 3: US Census Job Type Distribution</h3>
-        <p>I wanted to see if there was a difference in job type distribution among the different regions. The difference does not become apparent until state-level granularity, and it seems to occur mainly in some of the smaller states. Even at this level, for most states, the difference was between Production and Construction jobs, with Production slightly outnumbering Construction jobs, as seen in Wyoming. Apart from this, Professional, Office, and then Service jobs were the most dominant.</p>
-        <p>To view the distribution of job types, I opted to utilize stacked bar graphs.</p>
-        <a href="https://public.tableau.com/app/profile/maya.maison/viz/USCensusJobTypeDistribution/JobTypeDistribution?publish=yes" target="_blank">View Tableau Visualization</a>
-        <div class="tableau-embed">
-            <iframe src="https://public.tableau.com/views/USCensusJobTypeDistribution/JobTypeDistribution?:showVizHome=no&:embed=true" width="100%" height="600" frameborder="0"></iframe>
-        </div>
-    </section>
+        <section>
+            <h2>Key Findings and Insights</h2>
 
-    <section>
-        <h2>Conclusion</h2>
-        <p>This Tableau analysis of US Census data provided valuable insights into demographic trends, poverty, employment, accessibility, and job distribution across the United States. The interactive visualizations allowed for a deeper understanding of these complex relationships, potentially informing policy decisions and further research.</p>
-    </section>
+            <h3>Insight 1: US Census Analysis - Poverty Spread</h3>
+            <p>I wanted to see if there was any correlation between employment and poverty. From this dashboard, we can see a few things. The least employed division is the East South Central region of the US, as indicated on the Employed Population by Area map, with an employment rate of 38.59% of the division's population. The East South Central division is comprised of Alabama, Kentucky, Mississippi, and Tennessee, according to the <a href="https://www2.census.gov/geo/pdfs/reference/GARM/Ch6GARM.pdf" target="_blank">Statistical Grouping of States and Counties</a> from the US Census Bureau. It is also one of the least populated regions, with a total population of 18,715,669 people, as seen on the Total Population by Area map.</p>
+            <p>If we look at a comparably populated division, New England (comprised of Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont), with a population of 14,632,374, we can see that New England has one of the highest rates of employment, with an employment rate of 49.58% of the division's population. Several factors may drive this, including the unknown ratio of children under the age of 16 included in each population.</p>
+            <p>When we look at poverty and child poverty counts against the population, we might expect that a more employed population would have less poverty. However, apart from Vermont, every other state in the New England division has a greater rate of both poverty and child poverty compared to the East South Central region.</p>
+            <p>For this dashboard, I opted to use maps to visualize employed population against the total population. I chose a scatter plot to view poverty and child poverty again the total population size. To look at the distribution and spread between unemployment and poverty, I chose box and whisker plots.</p>
+            <a href="https://public.tableau.com/app/profile/maya.maison/viz/USCensusAnalysis_17205486154900/PovertySpread?publish=yes" target="_blank">View Tableau Visualization</a>
+            <div class="tableau-embed">
+                <iframe src="https://public.tableau.com/views/USCensusAnalysis_17205486154900/PovertySpread?:showVizHome=no&:embed=true" width="100%" height="600" frameborder="0"></iframe>
+            </div>
 
-    </main>
-    </div>
-</div>
+            <h3>Insight 2: US Census Accessibility</h3>
+            <p>I wanted to determine which area had the greatest level of accessibility. To answer this question, I created a scoring system segmented by quartile, with the highest possible score being 12. Scores were based on Commute Time (where lower times received higher scores), and Walk and Transit (where greater numbers of people using these transportation modalities received higher scores).</p>
+            <p>The Western Region dominated. When looking more granularly, the Pacific Division of the Western Region had the highest score. Observing at the state level, Massachusetts had the highest score.</p>
+            <p>To view the scores I made, based on segments, I opted to view them in bar graphs.</p>
+            <a href="https://public.tableau.com/app/profile/maya.maison/viz/USCensusAccessibility/Accessibility?publish=yes" target="_blank">View Tableau Visualization</a>
+            <div class="tableau-embed">
+                <iframe src="https://public.tableau.com/views/USCensusAccessibility/Accessibility?:showVizHome=no&:embed=true" width="100%" height="600" frameborder="0"></iframe>
+            </div>
+
+            <h3>Insight 3: US Census Job Type Distribution</h3>
+            <p>I wanted to see if there was a difference in job type distribution among the different regions. The difference does not become apparent until state-level granularity, and it seems to occur mainly in some of the smaller states. Even at this level, for most states, the difference was between Production and Construction jobs, with Production slightly outnumbering Construction jobs, as seen in Wyoming. Apart from this, Professional, Office, and then Service jobs were the most dominant.</p>
+            <p>To view the distribution of job types, I opted to utilize stacked bar graphs.</p>
+            <a href="https://public.tableau.com/app/profile/maya.maison/viz/USCensusJobTypeDistribution/JobTypeDistribution?publish=yes" target="_blank">View Tableau Visualization</a>
+            <div class="tableau-embed">
+                <iframe src="https://public.tableau.com/views/USCensusJobTypeDistribution/JobTypeDistribution?:showVizHome=no&:embed=true" width="100%" height="600" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>This Tableau analysis of US Census data provided valuable insights into demographic trends, poverty, employment, accessibility, and job distribution across the United States. The interactive visualizations allowed for a deeper understanding of these complex relationships, potentially informing policy decisions and further research.</p>
+        </section>
+
+						</main>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+                            <section>
+                                <h2>Get in touch</h2>
+                                <form method="post" action="https://formspree.io/f/xvgprbvd">
+                                    <div class="fields">
+                                        <div class="field half">
+                                            <input type="text" name="name" id="name" placeholder="Name" required />
+                                        </div>
+                                        <div class="field half">
+                                            <input type="email" name="email" id="email" placeholder="Email" required />
+                                        </div>
+                                        <div class="field">
+                                            <textarea name="message" id="message" placeholder="Message" required></textarea>
+                                        </div>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Send" class="primary" /></li>
+                                    </ul>
+                                </form>
+                            </section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
