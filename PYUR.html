@@ -181,25 +181,48 @@
         <li><strong>Behavioral targeting:</strong> Interest in skincare, health and wellness, active lifestyles</li>
     </ul>
 
-    <h3>Facebook Ad Mockups A/B Test</h3>
+    <style>
+    .ab-test-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .ad-mockup {
+        flex: 1;
+        max-width: 48%;
+    }
+    .ad-mockup img {
+        width: 100%;
+        height: auto;
+    }
+    @media (max-width: 768px) {
+        .ab-test-container {
+            flex-direction: column;
+        }
+        .ad-mockup {
+            max-width: 100%;
+        }
+    }
+</style>
+
+<h3>Facebook Ad Mockups A/B Test</h3>
+<div class="ab-test-container">
     <div class="ad-mockup">
         <h4>Ad for Women</h4>
         <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/2023-q4-marketing-your-content-template/pyurgenderneutral.jpg?raw=true"  
-		alt="PYUR skincare ad for women"
-		style="width: 100%; max-width: 100%; height: auto;">
+        alt="PYUR skincare ad for women">
         <p>Reveal Your #PYURest Radiance and shine like never before</p>
         <button>Learn More</button>
-	</br></br>
     </div>
     <div class="ad-mockup">
         <h4>Ad for Men</h4>
         <img src="https://github.com/maya-maison/AnalyticAlchemy/blob/main/assets/2023-q4-marketing-your-content-template/pyurgenderneutral.jpg?raw=true"  
-		alt="PYUR skincare ad for men"
-		style="width: 100%; max-width: 100%; height: auto;">
+        alt="PYUR skincare ad for men">
         <p>#PYURify Your Game Face with our 3-step solution and conquer with confidence</p>
         <button>Learn More</button>
-    </br></br>
     </div>
+</div>
+
 
     <h3>A/B Testing Plan</h3>
     <p><strong>Goal:</strong> Determine which ad copy and imagery is more effective in driving engagement and clicks for men vs. women.</p>
