@@ -3329,7 +3329,7 @@ input, select, textarea {
 		}
 
 .profile-image {
-    width: 300px; /* You can adjust this value */
+    width: 200px; /* You can adjust this value */
     height: auto;
     max-height: 300px;
     object-fit: contain;
