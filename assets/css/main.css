@@ -3328,9 +3328,12 @@ input, select, textarea {
 
 		}
 
-.profile-image {
-    width: 150px; /* or 100px, or any value you prefer */
-    height: auto;
-    display: block;
-    margin: 0 auto;
+#main .inner .image.main img.profile-image {
+    width: 200px !important;
+    height: auto !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
 }
