@@ -3327,3 +3327,12 @@ input, select, textarea {
 			}
 
 		}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
