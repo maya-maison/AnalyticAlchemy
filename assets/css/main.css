@@ -3329,7 +3329,7 @@ input, select, textarea {
 		}
 
 .inner {
-    max-width: 1280px;  /* Adjust this value as needed */
+    max-width: 83.333%;  /* Adjust this value as needed */
     margin: 0 auto;
     padding: 0 2em;
 }
