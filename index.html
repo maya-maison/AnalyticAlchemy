@@ -1,201 +1,89 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Maya Maison's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+/* Sound & Signal — case study styles */
+:root{
+  --ink:#0E1420;
+  --ink-2:#141C2B;
+  --line:rgba(255,255,255,.09);
+  --line-2:rgba(255,255,255,.16);
+  --fg:#E9EDF3;
+  --fg-2:#96A3B8;
+  --fg-3:#63718A;
+  --signal:#5B9BD9;
+  --refusal:#E05252;
+  --display:"Fraunces",Georgia,serif;
+  --sans:"Instrument Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --pad:clamp(1.25rem,5vw,5rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--pad)}
+.narrow{max-width:760px}
 
-				<!-- Header -->
-<header id="header">
-    <div class="inner">
-        <!-- Nav -->
-        <nav>
-            <ul>
-                <li><a href="#menu">Menu</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+/* masthead */
+.mast{position:sticky;top:0;z-index:50;background:rgba(14,20,32,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.mast .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.mark{font-family:var(--display);font-size:1.06rem;font-weight:400;letter-spacing:.055em;text-decoration:none}
+.mark em{font-style:normal;color:var(--signal)}
+.mast nav{display:flex;gap:2rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
+.mast nav a{color:var(--fg-2);text-decoration:none;transition:color .2s}
+.mast nav a:hover{color:var(--fg)}
+@media(max-width:720px){.mast nav{gap:1.1rem}.mast nav a:nth-child(3){display:none}}
 
-<!-- Menu -->
-<nav id="menu">
-    <h2>Menu</h2>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#python-forecasting">Python &amp; Forecasting Projects</a></li>
-        <li><a href="Medicare.html">Medicare Enrollment Forecasting</a></li>
-        <li><a href="Olist.html">Olist Seller Performance &amp; SLA Analytics</a></li>
-        <li><a href="index.html#business-analysis">Business Analysis Projects</a></li>
-        <li><a href="NYSE.html">NYSE Financial Analysis</a></li>
-        <li><a href="SQLChinook.html">SQL Music Store Analysis</a></li>
-        <li><a href="US Census.html">Tableau US Census Demographic Analysis</a></li>
-        <li><a href="index.html#marketing-analytics">Marketing Analytics Projects</a></li>
-        <li><a href="Google Analytics.html">Digital Marketing Performance Optimization</a></li>
-        <li><a href="Magnolia Coffee.html">E-commerce Marketing Strategy &amp; Campaign Design</a></li>
-        <li><a href="PYUR.html">Comprehensive Social Media Marketing Campaign</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <!--<li><a href="contact.html">Contact</a></li>-->
-    </ul>
-</nav>
+/* case hero */
+.case-hero{padding:clamp(3rem,8vw,6rem) 0 clamp(2rem,5vw,3.5rem)}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-3);margin-bottom:1.6rem}
+.case-hero h1{font-family:var(--display);font-weight:300;font-size:clamp(1.9rem,4.4vw,3.1rem);line-height:1.16;letter-spacing:-.015em;max-width:20ch}
+.standfirst{margin-top:1.6rem;font-size:1.15rem;color:var(--fg-2);max-width:60ch}
 
-				<!-- Main -->
-	<div id="main">
-    <div class="inner">
-        <header>
-            <h1>Welcome to Analytic Alchemy,<br />
-            <a href="https://maya-maison.github.io/AnalyticAlchemy/about.html">Maya Maison</a>'s portfolio.</h1>
-            <p>I am an analytics alchemist dedicated to transforming raw data into actionable gold.</p>
-        </header>
+/* meta strip */
+.meta{margin-top:2.8rem;padding-top:1.4rem;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+@media(max-width:760px){.meta{grid-template-columns:1fr 1fr}}
+.meta dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3);margin-bottom:.35rem}
+.meta dd{font-family:var(--mono);font-size:.84rem;color:var(--fg)}
 
-        <h2 id="python-forecasting">Python &amp; Forecasting Projects</h2>
-        <section class="tiles">
-            <article class="style2">
-                <span class="image">
-                    <img src="images/pic07.jpg" alt="" />
-                </span>
-                <a href="Medicare.html">
-                    <h2>Medicare Enrollment Seasonal Forecasting</h2>
-                    <div class="content">
-                        <p>Built a seasonal forecasting model on thirteen years of CMS Medicare enrollment data, then tested whether the pattern was still stable before projecting it. It wasn't. January plan switching has collapsed 94% since 2021, and a naive index would have overstated the coming January by nine times.</p>
-                    </div>
-                </a>
-            </article>
-            <article class="style6">
-                <span class="image">
-                    <img src="images/pic08.jpg" alt="" />
-                </span>
-                <a href="Olist.html">
-                    <h2>Olist Seller Performance &amp; SLA Analytics</h2>
-                    <div class="content">
-                        <p>Line-level OTIF analysis across 2,970 marketplace sellers, applying supply chain vendor management methodology to public e-commerce data. Built a WAR (wins above replacement) framework to rank vendors by the SLA impact of removing them, surfacing risk that a late rate alone would miss.</p>
-                    </div>
-                </a>
-            </article>
-        </section></br></br>
+.btn{display:inline-block;margin-top:2.4rem;padding:.72rem 1.4rem;border:1px solid var(--line-2);border-radius:2px;font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--fg);transition:border-color .25s,color .25s}
+.btn:hover{border-color:var(--signal);color:var(--signal)}
 
-        <h2 id="business-analysis">Business Analysis Projects</h2>
-        <section class="tiles">
-            <article class="style1">
-                <span class="image">
-                    <img src="images/pic01.jpg" alt="" />
-                </span>
-                <a href="NYSE.html">
-                    <h2>NYSE Financial Analysis</h2>
-                    <div class="content">
-                        <p>Analyzed mock financial data using Excel, created dashboards, and developed forecasting models for enhanced decision-making.</p>
-                    </div>
-                </a>
-            </article>
-            <article class="style4">
-                <span class="image">
-                    <img src="images/pic04.jpg" alt="" />
-                </span>
-                <a href="SQLChinook.html">
-                    <h2>SQL Music Store Analysis</h2>
-                    <div class="content">
-                        <p>Utilized SQL to query and analyze a digital music store database, extracting insights on customer behavior, popular genres, and sales trends to inform business strategies.</p>
-                    </div>
-                </a>
-            </article>
-            <article class="style5">
-                <span class="image">
-                    <img src="images/pic05.jpg" alt="" />
-                </span>
-                <a href="US Census.html">
-                    <h2>Tableau US Census Demographic Analysis</h2>
-                    <div class="content">
-                        <p>Created interactive Tableau dashboards analyzing US Census data to reveal insights on state transportation effectiveness, income distribution, and poverty across America.</p>
-                    </div>
-                </a>
-            </article>
-        </section></br></br>
+/* sections */
+section.blk{padding:clamp(2.8rem,6vw,4.5rem) 0;border-top:1px solid var(--line)}
+.sec-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-3);margin-bottom:1.6rem}
+h2.hd{font-family:var(--display);font-weight:300;font-size:clamp(1.5rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.01em;margin-bottom:1.4rem;max-width:22ch}
+h3.sub{font-family:var(--sans);font-weight:600;font-size:1.05rem;margin:2rem 0 .6rem;color:var(--fg)}
+p{color:var(--fg-2);max-width:68ch}
+p + p{margin-top:1.05rem}
+strong{color:var(--fg);font-weight:600}
+em{color:var(--fg);font-style:italic}
+ul.pts{list-style:none;margin-top:1.2rem}
+ul.pts li{position:relative;padding-left:1.5rem;margin-bottom:.9rem;color:var(--fg-2);max-width:68ch}
+ul.pts li::before{content:"·";position:absolute;left:.3rem;color:var(--signal);font-weight:700}
 
-        <h2 id="marketing-analytics">Marketing Analytics Projects</h2>
-        <section class="tiles">
-            <article class="style2">
-                <span class="image">
-                    <img src="images/pic02.jpg" alt="" />
-                </span>
-                <a href="Google Analytics.html">
-                    <h2>Digital Marketing Performance Optimization</h2>
-                    <div class="content">
-                        <p>Leveraged Google Analytics to extract audience insights, identify valuable segments, and propose data-driven marketing optimizations.</p>
-                    </div>
-                </a>
-            </article>
-            <article class="style3">
-                <span class="image">
-                    <img src="images/pic03.jpg" alt="" />
-                </span>
-                <a href="Magnolia Coffee.html">
-                    <h2>E-commerce Marketing Strategy &amp; Campaign Design</h2>
-                    <div class="content">
-                        <p>Crafted e-commerce marketing strategy with persona development, customer journey mapping, and multi-channel campaign planning.</p>
-                    </div>
-                </a>
-            </article>
-            <article class="style6">
-                <span class="image">
-                    <img src="images/pic06.jpg" alt="" />
-                </span>
-                <a href="PYUR.html">
-                    <h2>Comprehensive Social Media Marketing Campaign</h2>
-                    <div class="content">
-                        <p>Developed an end-to-end social media marketing strategy for a skincare brand, including content planning, A/B testing for conversion optimization, paid advertising tactics, and marketing technology stack evaluation.</p>
-                    </div>
-                </a>
-            </article>
-						</section>
-					</div>
-				</div>
+/* plates */
+figure{margin:2.4rem 0}
+figure .plate{background:#fff;padding:1rem;border-radius:2px}
+figure img{width:100%;display:block}
+figcaption{margin-top:.8rem;font-family:var(--mono);font-size:.78rem;line-height:1.55;color:var(--fg-3);max-width:68ch}
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="https://formspree.io/f/xvgprbvd">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" required />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" required />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message" required></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Maya Maison. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+/* callout */
+.callout{margin:2.2rem 0;padding:1.4rem 1.6rem;border-left:2px solid var(--refusal);background:var(--ink-2);border-radius:0 2px 2px 0}
+.callout.blue{border-left-color:var(--signal)}
+.callout p{color:var(--fg);max-width:none}
+.callout .tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--refusal);margin-bottom:.6rem}
+.callout.blue .tag{color:var(--signal)}
 
-			</div>
+/* table */
+table{width:100%;border-collapse:collapse;margin:1.8rem 0;font-family:var(--mono);font-size:.86rem}
+th{text-align:left;padding:.7rem .9rem;border-bottom:1px solid var(--line-2);font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-3)}
+td{padding:.7rem .9rem;border-bottom:1px solid var(--line);color:var(--fg-2)}
+tbody tr:last-child td{color:var(--refusal)}
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+/* footer */
+.foot{padding:clamp(3rem,7vw,5rem) 0 3rem;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end}
+@media(max-width:700px){.foot-grid{grid-template-columns:1fr;align-items:start}}
+.foot h2{font-family:var(--display);font-weight:300;font-size:clamp(1.5rem,3.4vw,2.3rem);letter-spacing:-.01em;max-width:16ch}
+.foot-links{display:flex;flex-direction:column;gap:.55rem;font-family:var(--mono);font-size:.82rem}
+.foot-links a{color:var(--fg-2);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:var(--signal)}
+.colophon{margin-top:4rem;padding-top:1.4rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--fg-3)}
