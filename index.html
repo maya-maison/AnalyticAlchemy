@@ -1,7 +1,18 @@
-/* Sound & Signal — case study styles */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sound &amp; Signal — Maya Maison</title>
+<meta name="description" content="Maya Maison. Data analyst. Healthcare, forecasting, and vendor performance analytics." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
 :root{
   --ink:#0E1420;
   --ink-2:#141C2B;
+  --raise:#1B2536;
   --line:rgba(255,255,255,.09);
   --line-2:rgba(255,255,255,.16);
   --fg:#E9EDF3;
@@ -16,74 +27,315 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{
+  background:var(--ink);
+  color:var(--fg);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
 a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding:0 var(--pad)}
-.narrow{max-width:760px}
 
-/* masthead */
-.mast{position:sticky;top:0;z-index:50;background:rgba(14,20,32,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+/* ---------- masthead ---------- */
+.mast{
+  position:sticky;top:0;z-index:50;
+  background:rgba(14,20,32,.72);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
 .mast .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
-.mark{font-family:var(--display);font-size:1.06rem;font-weight:400;letter-spacing:.055em;text-decoration:none}
+.mark{
+  font-family:var(--display);
+  font-size:1.06rem;font-weight:400;letter-spacing:.055em;
+  text-decoration:none;
+}
 .mark em{font-style:normal;color:var(--signal)}
 .mast nav{display:flex;gap:2rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
 .mast nav a{color:var(--fg-2);text-decoration:none;transition:color .2s}
 .mast nav a:hover{color:var(--fg)}
 @media(max-width:720px){.mast nav{gap:1.1rem}.mast nav a:nth-child(3){display:none}}
 
-/* case hero */
-.case-hero{padding:clamp(3rem,8vw,6rem) 0 clamp(2rem,5vw,3.5rem)}
-.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-3);margin-bottom:1.6rem}
-.case-hero h1{font-family:var(--display);font-weight:300;font-size:clamp(1.9rem,4.4vw,3.1rem);line-height:1.16;letter-spacing:-.015em;max-width:20ch}
-.standfirst{margin-top:1.6rem;font-size:1.15rem;color:var(--fg-2);max-width:60ch}
+/* ---------- hero ---------- */
+.hero{padding:clamp(4rem,11vw,8.5rem) 0 clamp(3rem,7vw,5rem)}
+.eyebrow{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--fg-3);margin-bottom:2.2rem;
+}
+.thesis{
+  font-family:var(--display);
+  font-weight:300;
+  font-size:clamp(1.85rem,4.6vw,3.4rem);
+  line-height:1.18;
+  letter-spacing:-.015em;
+  max-width:19ch;
+}
+.thesis .hold{color:var(--refusal)}
+.attrib{
+  margin-top:1.6rem;font-family:var(--mono);font-size:.76rem;
+  color:var(--fg-3);letter-spacing:.05em;
+}
 
-/* meta strip */
-.meta{margin-top:2.8rem;padding-top:1.4rem;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
-@media(max-width:760px){.meta{grid-template-columns:1fr 1fr}}
-.meta dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3);margin-bottom:.35rem}
-.meta dd{font-family:var(--mono);font-size:.84rem;color:var(--fg)}
+/* ---------- the signal ---------- */
+.signal-block{margin-top:clamp(3rem,7vw,5rem);border-top:1px solid var(--line);padding-top:1.4rem}
+.signal-cap{
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;
+  color:var(--fg-3);text-transform:uppercase;margin-bottom:.9rem;
+}
+.signal-svg{width:100%;height:auto;display:block;overflow:visible}
+.sig-path{
+  fill:none;stroke:var(--signal);stroke-width:1.6;
+  vector-effect:non-scaling-stroke;
+  stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:2400;stroke-dashoffset:2400;
+  animation:draw 2.6s cubic-bezier(.5,0,.2,1) .3s forwards;
+}
+.sig-zero{stroke:var(--line-2);stroke-width:1;stroke-dasharray:3 4}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.sig-path{animation:none;stroke-dashoffset:0}}
 
-.btn{display:inline-block;margin-top:2.4rem;padding:.72rem 1.4rem;border:1px solid var(--line-2);border-radius:2px;font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--fg);transition:border-color .25s,color .25s}
-.btn:hover{border-color:var(--signal);color:var(--signal)}
+/* ---------- lede ---------- */
+.lede{padding:clamp(3.5rem,8vw,6rem) 0;border-top:1px solid var(--line);margin-top:clamp(3rem,7vw,5rem)}
+.lede-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(1.5rem,5vw,4.5rem)}
+@media(max-width:800px){.lede-grid{grid-template-columns:1fr}}
+.sec-label{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--fg-3);
+}
+.lede p{font-size:1.12rem;color:var(--fg-2);max-width:62ch}
+.lede p + p{margin-top:1.1rem}
+.lede strong{color:var(--fg);font-weight:500}
 
-/* sections */
-section.blk{padding:clamp(2.8rem,6vw,4.5rem) 0;border-top:1px solid var(--line)}
-.sec-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-3);margin-bottom:1.6rem}
-h2.hd{font-family:var(--display);font-weight:300;font-size:clamp(1.5rem,3.2vw,2.2rem);line-height:1.25;letter-spacing:-.01em;margin-bottom:1.4rem;max-width:22ch}
-h3.sub{font-family:var(--sans);font-weight:600;font-size:1.05rem;margin:2rem 0 .6rem;color:var(--fg)}
-p{color:var(--fg-2);max-width:68ch}
-p + p{margin-top:1.05rem}
-strong{color:var(--fg);font-weight:600}
-em{color:var(--fg);font-style:italic}
-ul.pts{list-style:none;margin-top:1.2rem}
-ul.pts li{position:relative;padding-left:1.5rem;margin-bottom:.9rem;color:var(--fg-2);max-width:68ch}
-ul.pts li::before{content:"·";position:absolute;left:.3rem;color:var(--signal);font-weight:700}
+/* ---------- work ---------- */
+.work{padding:clamp(3.5rem,8vw,6rem) 0;border-top:1px solid var(--line)}
+.work-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2.6rem}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
 
-/* plates */
-figure{margin:2.4rem 0}
-figure .plate{background:#fff;padding:1rem;border-radius:2px}
-figure img{width:100%;display:block}
-figcaption{margin-top:.8rem;font-family:var(--mono);font-size:.78rem;line-height:1.55;color:var(--fg-3);max-width:68ch}
+.card{
+  position:relative;display:block;text-decoration:none;
+  border:1px solid var(--line);border-radius:2px;
+  background:var(--ink-2);
+  overflow:hidden;
+  transition:border-color .35s ease, transform .35s ease;
+}
+.card:hover,.card:focus-visible{border-color:var(--line-2);transform:translateY(-3px)}
+.card:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.plate{
+  background:#fff;padding:.9rem;
+  border-bottom:1px solid var(--line);
+}
+.plate img{width:100%;display:block}
+.card-body{padding:1.6rem 1.5rem 1.7rem}
+.card-idx{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
+  color:var(--fg-3);text-transform:uppercase;
+}
+.card h3{
+  font-family:var(--display);font-weight:400;
+  font-size:1.42rem;line-height:1.25;margin:.55rem 0 .9rem;
+  letter-spacing:-.01em;
+}
+.card p{font-size:.95rem;color:var(--fg-2);line-height:1.6}
+.verdict{
+  margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:.79rem;line-height:1.55;
+  color:var(--refusal);
+}
+.verdict.blue{color:var(--signal)}
 
-/* callout */
-.callout{margin:2.2rem 0;padding:1.4rem 1.6rem;border-left:2px solid var(--refusal);background:var(--ink-2);border-radius:0 2px 2px 0}
-.callout.blue{border-left-color:var(--signal)}
-.callout p{color:var(--fg);max-width:none}
-.callout .tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--refusal);margin-bottom:.6rem}
-.callout.blue .tag{color:var(--signal)}
+/* frosted reveal */
+.frost{
+  position:absolute;inset:0;
+  background:rgba(14,20,32,.78);
+  backdrop-filter:blur(9px) saturate(120%);
+  -webkit-backdrop-filter:blur(9px) saturate(120%);
+  opacity:0;transition:opacity .38s ease;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:2rem 1.8rem;
+  pointer-events:none;
+}
+.card:hover .frost,.card:focus-visible .frost{opacity:1}
+.frost dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.1rem;font-family:var(--mono);font-size:.78rem}
+.frost dt{color:var(--fg-3);text-transform:uppercase;letter-spacing:.1em;white-space:nowrap}
+.frost dd{color:var(--fg)}
+.frost .go{
+  margin-top:1.6rem;font-family:var(--mono);font-size:.75rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--signal);
+}
+@media(hover:none){.frost{display:none}}
 
-/* table */
-table{width:100%;border-collapse:collapse;margin:1.8rem 0;font-family:var(--mono);font-size:.86rem}
-th{text-align:left;padding:.7rem .9rem;border-bottom:1px solid var(--line-2);font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-3)}
-td{padding:.7rem .9rem;border-bottom:1px solid var(--line);color:var(--fg-2)}
-tbody tr:last-child td{color:var(--refusal)}
+/* ---------- archive ---------- */
+.archive{padding:clamp(3rem,7vw,5rem) 0;border-top:1px solid var(--line)}
+.arc-list{margin-top:2rem;border-top:1px solid var(--line)}
+.arc{
+  display:flex;align-items:baseline;gap:1.4rem;
+  padding:1.05rem .25rem;border-bottom:1px solid var(--line);
+  text-decoration:none;transition:padding-left .28s ease,color .28s ease;
+}
+.arc:hover{padding-left:.85rem}
+.arc:hover .arc-name{color:var(--signal)}
+.arc-tool{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--fg-3);width:5.5rem;flex-shrink:0;
+}
+.arc-name{font-size:1rem;color:var(--fg-2);transition:color .28s ease}
+@media(max-width:620px){.arc{flex-direction:column;gap:.25rem}.arc-tool{width:auto}}
 
-/* footer */
-.foot{padding:clamp(3rem,7vw,5rem) 0 3rem;border-top:1px solid var(--line)}
+/* ---------- contact ---------- */
+.foot{padding:clamp(3.5rem,8vw,6rem) 0 3rem;border-top:1px solid var(--line)}
 .foot-grid{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end}
 @media(max-width:700px){.foot-grid{grid-template-columns:1fr;align-items:start}}
-.foot h2{font-family:var(--display);font-weight:300;font-size:clamp(1.5rem,3.4vw,2.3rem);letter-spacing:-.01em;max-width:16ch}
+.foot h2{
+  font-family:var(--display);font-weight:300;
+  font-size:clamp(1.5rem,3.4vw,2.3rem);letter-spacing:-.01em;max-width:16ch;
+}
 .foot-links{display:flex;flex-direction:column;gap:.55rem;font-family:var(--mono);font-size:.82rem}
 .foot-links a{color:var(--fg-2);text-decoration:none;transition:color .2s}
 .foot-links a:hover{color:var(--signal)}
-.colophon{margin-top:4rem;padding-top:1.4rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--fg-3)}
+.colophon{
+  margin-top:4rem;padding-top:1.4rem;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--fg-3);
+}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <a class="mark" href="index.html">Sound <em>&amp;</em> Signal</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#archive">Archive</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Maya Maison — Data Analyst — San Antonio, TX</p>
+      <h1 class="thesis">A forecast that cannot be defended is <span class="hold">worse</span> than no forecast, because someone will staff to it.</h1>
+      <p class="attrib">— from the Medicare enrollment analysis, below</p>
+
+      <div class="signal-block">
+        <div class="signal-cap">
+          <span>Residual · actual minus fitted</span>
+          <span>Medicare enrollment, 2013 – 2026</span>
+        </div>
+        <svg class="signal-svg" viewBox="0 0 1000 130" preserveAspectRatio="none" role="img" aria-label="Residual plot showing an arc: below the trend line early, peaking around 2020, falling below again by 2026.">
+          <line class="sig-zero" x1="0" y1="65" x2="1000" y2="65" />
+          <path class="sig-path" d="M0,112 L18,116 L34,110 L52,113 L68,105 L86,88 L104,78 L120,74 L138,76 L152,72 L168,58 L182,55 L196,62 L212,70 L228,54 L244,48 L258,44 L272,46 L288,40 L302,36 L316,44 L330,42 L344,30 L358,38 L372,48 L386,22 L400,30 L414,28 L430,20 L446,24 L462,18 L476,14 L490,12 L506,10 L520,14 L536,20 L550,26 L562,24 L578,26 L592,42 L606,54 L622,62 L636,70 L650,66 L664,64 L678,66 L694,72 L708,84 L722,92 L736,90 L750,86 L764,80 L778,88 L792,92 L806,90 L820,84 L834,78 L848,82 L862,80 L876,74 L890,70 L904,64 L918,68 L932,72 L946,70 L960,66 L974,86 L988,104 L1000,106" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEDE -->
+  <section class="lede">
+    <div class="wrap lede-grid">
+      <p class="sec-label">The work</p>
+      <div>
+        <p>I spend most of my time on the part of analysis nobody photographs: checking whether the thing I'm about to claim actually holds.</p>
+        <p>In the Medicare project, that meant writing down what I expected before running the test, and reporting it when the data proved me wrong. It meant noticing that an R-squared of 0.9984 was hiding a structural break. And it meant <strong>refusing to forecast the number I'd built the whole model to forecast</strong>, because the pattern behind it had collapsed and no honest version of that projection existed.</p>
+        <p>Seven years across healthcare benefits, medical device logistics, and supply chain reporting. Currently an Omnichannel Analyst at Mattress Firm, owning enterprise invoicing, GL coding, and the Power BI reporting that goes to directors. Finishing an M.S. in Artificial Intelligence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="work-head">
+        <p class="sec-label">Selected projects</p>
+        <p class="sec-label">2026</p>
+      </div>
+
+      <div class="cards">
+
+        <a class="card" href="Medicare.html">
+          <div class="plate"><img src="images/05_forecast.png" alt="Total Medicare enrollment with a twelve month forecast" /></div>
+          <div class="card-body">
+            <p class="card-idx">Healthcare · Forecasting · Python</p>
+            <h3>Medicare Enrollment Seasonal Forecasting</h3>
+            <p>Thirteen years of CMS enrollment data. I set out to build a seasonal index for capacity planning and found that open enrollment does not drive enrollment at all. It drives plan switching — 794,000 people every January, invisible in the total because the components cancel.</p>
+            <p class="verdict">Verdict: the index describes a regime that ended. Projecting it would overstate January by 9×. Do not forecast the switch.</p>
+          </div>
+          <div class="frost">
+            <dl>
+              <dt>Data</dt><dd>CMS API · 159 months · live pull</dd>
+              <dt>Method</dt><dd>2×12 MA decomposition, seasonal index, stability testing</dd>
+              <dt>Found</dt><dd>Switching collapsed 94% since 2021</dd>
+              <dt>Delivered</dt><dd>Trend forecast + capacity recommendation</dd>
+            </dl>
+            <p class="go">Read the analysis →</p>
+          </div>
+        </a>
+
+        <a class="card" href="Olist.html">
+          <div class="plate"><img src="images/03_seller_war.png" alt="Seller WAR: top 5 anchors versus bottom 5 detractors, ranked by SLA impact" /></div>
+          <div class="card-body">
+            <p class="card-idx">Marketplace · Vendor Performance · Python</p>
+            <h3>Olist Seller Performance &amp; SLA Analytics</h3>
+            <p>Line-level OTIF across 2,970 sellers, treating vendors the way a supply chain team does in a live operation. I built a WAR score — wins above replacement, borrowed from baseball — to rank sellers by how much platform SLA would move if you removed them.</p>
+            <p class="verdict blue">Verdict: late rate hides two different risk profiles. The geographic analysis was scoped, tested, and cut.</p>
+          </div>
+          <div class="frost">
+            <dl>
+              <dt>Data</dt><dd>Olist marketplace · 2,970 sellers</dd>
+              <dt>Method</dt><dd>Line-level OTIF, WAR vendor impact modeling</dd>
+              <dt>Found</dt><dd>91.9% platform SLA · ~7,800 late deliveries</dd>
+              <dt>Cut</dt><dd>State-level analysis — data too thin to defend</dd>
+            </dl>
+            <p class="go">Read the analysis →</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHIVE -->
+  <section class="archive" id="archive">
+    <div class="wrap">
+      <p class="sec-label">Archive — earlier coursework</p>
+      <div class="arc-list">
+        <a class="arc" href="NYSE.html"><span class="arc-tool">Excel</span><span class="arc-name">NYSE Financial Analysis &amp; Forecasting Dashboard</span></a>
+        <a class="arc" href="SQLChinook.html"><span class="arc-tool">SQL</span><span class="arc-name">Music Store Database Analysis</span></a>
+        <a class="arc" href="US Census.html"><span class="arc-tool">Tableau</span><span class="arc-name">US Census Demographic Analysis</span></a>
+        <a class="arc" href="Google Analytics.html"><span class="arc-tool">GA</span><span class="arc-name">Digital Marketing Performance Optimization</span></a>
+        <a class="arc" href="Magnolia Coffee.html"><span class="arc-tool">Strategy</span><span class="arc-name">E-commerce Marketing Strategy &amp; Campaign Design</span></a>
+        <a class="arc" href="PYUR.html"><span class="arc-tool">Strategy</span><span class="arc-name">Social Media Marketing Campaign</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer class="foot" id="contact">
+    <div class="wrap">
+      <div class="foot-grid">
+        <h2>Currently open to analytics roles.</h2>
+        <div class="foot-links">
+          <a href="mailto:maison.data@outlook.com">maison.data@outlook.com</a>
+          <a href="https://www.linkedin.com/in/maya-maison" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/maya-maison" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="colophon">
+        <span>Sound &amp; Signal — Maya Maison</span>
+        <span>San Antonio, TX</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+</body>
+</html>
