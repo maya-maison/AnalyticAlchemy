@@ -11,172 +11,193 @@
 <link rel="stylesheet" href="assets/css/case.css">
 <style>
   /* about-specific */
-    .about-hero{padding:clamp(3rem,8vw,6rem) 0 clamp(2rem,5vw,3rem)}
-	  .about-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(2rem,6vw,4.5rem);align-items:start}
-	    @media(max-width:840px){.about-grid{grid-template-columns:1fr}}
-		  .about-hero h1{font-family:var(--display);font-weight:300;font-size:clamp(1.9rem,4.4vw,3.1rem);line-height:1.16;letter-spacing:-.015em;max-width:18ch}
-		    .portrait{border:1px solid var(--line);border-radius:2px;overflow:hidden;background:var(--ink-2)}
-			  .portrait img{width:100%;display:block;filter:grayscale(100%) contrast(1.04);transition:filter .6s ease}
-			    .portrait:hover img{filter:grayscale(0%) contrast(1)}
-				  .portrait figcaption{padding:.85rem 1rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3);border-top:1px solid var(--line);margin:0}
-				    .stack{display:grid;grid-template-columns:1fr 1fr;gap:2rem 2.5rem;margin-top:1.6rem}
-					  @media(max-width:620px){.stack{grid-template-columns:1fr}}
-					    .stack h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3);margin-bottom:.7rem;font-weight:500}
-						  .stack ul{list-style:none}
-						    .stack li{color:var(--fg-2);font-size:.95rem;padding:.28rem 0}
-							  .cv{margin-top:1.4rem;border-top:1px solid var(--line)}
-							    .cv-row{display:grid;grid-template-columns:9rem 1fr;gap:1.4rem;padding:1.1rem .25rem;border-bottom:1px solid var(--line)}
-								  @media(max-width:620px){.cv-row{grid-template-columns:1fr;gap:.2rem}}
-								    .cv-when{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--fg-3);padding-top:.2rem}
-									  .cv-what strong{display:block;color:var(--fg);font-weight:600;font-size:1rem;margin-bottom:.25rem}
-									    .cv-what span{color:var(--fg-2);font-size:.94rem}
-										  .portrait.wide{margin:2.4rem 0;max-width:100%}
-										    .portrait.wide img{filter:grayscale(100%) contrast(1.04)}
-											  .portrait.wide:hover img{filter:grayscale(0%) contrast(1)}
-											  </style>
-											  </head>
-											  <body>
+  .about-hero{padding:clamp(3rem,8vw,6rem) 0 clamp(2rem,5vw,3rem)}
+  .about-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(2rem,6vw,4.5rem);align-items:start}
+  @media(max-width:840px){.about-grid{grid-template-columns:1fr}}
+  .about-hero h1{font-family:var(--display);font-weight:300;font-size:clamp(1.9rem,4.4vw,3.1rem);line-height:1.16;letter-spacing:-.015em;max-width:18ch}
+  /* circular portrait */
+  .portrait{text-align:center}
+  .portrait .ring{
+    width:100%;max-width:300px;aspect-ratio:1;margin:0 auto;
+    border-radius:50%;overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 0 0 8px rgba(91,155,217,.05);
+    background:var(--ink-2);
+    transition:box-shadow .5s ease, border-color .5s ease;
+  }
+  .portrait:hover .ring{box-shadow:0 0 0 8px rgba(91,155,217,.12);border-color:var(--line-2)}
+  .portrait .ring img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(100%) contrast(1.04);transition:filter .6s ease}
+  .portrait:hover .ring img{filter:grayscale(0%) contrast(1)}
+  .portrait figcaption{margin-top:1.1rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3)}
+  @media(max-width:840px){.portrait .ring{max-width:220px}}
+  .stack{display:grid;grid-template-columns:1fr 1fr;gap:2rem 2.5rem;margin-top:1.6rem}
+  @media(max-width:620px){.stack{grid-template-columns:1fr}}
+  .stack h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3);margin-bottom:.7rem;font-weight:500}
+  .stack ul{list-style:none}
+  .stack li{color:var(--fg-2);font-size:.95rem;padding:.28rem 0}
+  .cv{margin-top:1.4rem;border-top:1px solid var(--line)}
+  .cv-row{display:grid;grid-template-columns:9rem 1fr;gap:1.4rem;padding:1.1rem .25rem;border-bottom:1px solid var(--line)}
+  @media(max-width:620px){.cv-row{grid-template-columns:1fr;gap:.2rem}}
+  .cv-when{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--fg-3);padding-top:.2rem}
+  .cv-what strong{display:block;color:var(--fg);font-weight:600;font-size:1rem;margin-bottom:.25rem}
+  .cv-what span{color:var(--fg-2);font-size:.94rem}
+  .portrait.wide{margin:2.4rem 0;max-width:100%;text-align:left;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:var(--ink-2)}
+  .portrait.wide img{width:100%;display:block;filter:grayscale(100%) contrast(1.04);transition:filter .6s ease}
+  .portrait.wide:hover img{filter:grayscale(0%) contrast(1)}
+  .portrait.wide figcaption{margin-top:0;padding:.85rem 1rem;border-top:1px solid var(--line);letter-spacing:.1em}
+</style>
+</head>
+<body>
 
-											  <header class="mast">
-											    <div class="wrap">
-												    <a class="mark" href="index.html">Sound <em>&amp;</em> Signal</a>
-													    <nav>
-														      <a href="index.html#work">Work</a>
-															        <a href="index.html#archive">Archive</a>
-																	      <a href="about.html">About</a>
-																		        <a href="index.html#contact">Contact</a>
-																				    </nav>
-																					  </div>
-																					  </header>
+<header class="mast">
+  <div class="wrap">
+    <a class="mark" href="index.html">Sound <em>&amp;</em> Signal</a>
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#archive">Archive</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-																					  <main>
+<main>
 
-																					  <section class="about-hero">
-																					    <div class="wrap about-grid">
-																						    <div>
-																							      <p class="eyebrow">Maya Maison — San Antonio, TX</p>
-																								        <h1>I'm the analyst who asks whether the number still holds.</h1>
-																										      <p class="standfirst">Seven years across healthcare benefits, medical device logistics, and supply chain reporting. I came to analytics through operations, which is why I care less about the model being elegant than about it being right when someone commits to it.</p>
-																											      </div>
-																												      <figure class="portrait">
-																													        <img src="images/177593378.jpeg" alt="Maya Maison" />
-																															      <figcaption>Maya Maison</figcaption>
-																																      </figure>
-																																	    </div>
-																																		</section>
-																																		<section class="blk">
-																																		  <div class="wrap narrow">
-																																		      <p class="sec-label">The path</p>
-																																			      <p>I started in benefits administration, managing enrollment and eligibility for over 10,000 associates. That job taught me what a number means on the other end of a screen, because the person on the other end was calling me about it.</p>
-																																				      <p>From there: healthcare account analytics at West Corporation, where I learned seasonalized index forecasting and RFM segmentation on accounts worth $12M a year. Then medical device logistics at SteeperUSA, where a demand analysis cut $125,000 of annual excess inventory and a compliance failure would have meant a recalled prosthetic, not a missed target.</p>
-																																					      <p>Today I'm an Omnichannel Analyst at Mattress Firm, owning enterprise carrier invoicing and GL coding, the vendor SLA compliance program, and the Power BI reporting that goes to supply chain directors on a fixed cadence.</p>
-																																						      <p><strong>The through-line is operations.</strong> I have never had the luxury of an analysis nobody acts on. Somebody ships against it, orders inventory to it, or takes a deduction because of it. That is why I test whether a finding survives before I present it, and why I will tell you when it doesn't.</p>
-																																							    </div>
-																																								</section>
-																																								<section class="blk">
-																																								  <div class="wrap narrow">
-																																								      <p class="sec-label">What I work in</p>
-																																									      <div class="stack">
-																																										        <div>
-																																												        <h4>Analysis</h4>
-																																														        <ul>
-																																																          <li>Python — Pandas, NumPy, Matplotlib</li>
-																																																		            <li>SQL — CTEs, joins, window functions</li>
-																																																					          <li>Google BigQuery</li>
-																																																							            <li>Time series &amp; seasonal index forecasting</li>
-																																																										          <li>Statistical testing</li>
-																																																												          </ul>
-																																																														        </div>
-																																																																      <div>
-																																																																	          <h4>Reporting &amp; BI</h4>
-																																																																			          <ul>
-																																																																					            <li>Power BI, DAX, Power Query</li>
-																																																																								          <li>Executive KPI reporting</li>
-																																																																										            <li>Advanced Excel</li>
-																																																																													          <li>Requirements gathering</li>
-																																																																															            <li>Process documentation &amp; SOPs</li>
-																																																																																		        </ul>
-																																																																																				      </div>
-																																																																																					        <div>
-																																																																																							        <h4>Domain</h4>
-																																																																																									        <ul>
-																																																																																											          <li>Healthcare benefits &amp; eligibility</li>
-																																																																																													            <li>HIPAA compliance</li>
-																																																																																																          <li>Vendor SLA &amp; compliance programs</li>
-																																																																																																		            <li>EDI — 850, 855, 856, 810</li>
-																																																																																																					          <li>Financial coding &amp; cost allocation</li>
-																																																																																																							          </ul>
-																																																																																																									        </div>
-																																																																																																											      <div>
-																																																																																																												          <h4>Study</h4>
-																																																																																																														          <ul>
-																																																																																																																            <li>M.S. Artificial Intelligence — in progress</li>
-																																																																																																																			          <li>Udacity / Woolf University</li>
-																																																																																																																					            <li>Business Analyst Nanodegree, 2024</li>
-																																																																																																																								          <li>Digital Marketing Nanodegree, 2024</li>
-																																																																																																																										          </ul>
-																																																																																																																												        </div>
-																																																																																																																														    </div>
-																																																																																																																															  </div>
-																																																																																																																															  </section>
-																																																																																																																															  <section class="blk">
-																																																																																																																															    <div class="wrap narrow">
-																																																																																																																																    <p class="sec-label">Where I've been</p>
-																																																																																																																																	    <div class="cv">
-																																																																																																																																		      <div class="cv-row">
-																																																																																																																																			          <span class="cv-when">2024 — present</span>
-																																																																																																																																					          <span class="cv-what"><strong>Omnichannel Analyst</strong><span>Mattress Firm · Remote</span></span>
-																																																																																																																																							        </div>
-																																																																																																																																									      <div class="cv-row">
-																																																																																																																																										          <span class="cv-when">2018 — 2022</span>
-																																																																																																																																												          <span class="cv-what"><strong>Logistics Analyst</strong><span>SteeperUSA · Prosthetics &amp; orthotics</span></span>
-																																																																																																																																														        </div>
-																																																																																																																																																      <div class="cv-row">
-																																																																																																																																																	          <span class="cv-when">2016 — 2018</span>
-																																																																																																																																																			          <span class="cv-what"><strong>Business Support Specialist</strong><span>West Corporation · Healthcare Division</span></span>
-																																																																																																																																																					        </div>
-																																																																																																																																																							      <div class="cv-row">
-																																																																																																																																																								          <span class="cv-when">2013 — 2015</span>
-																																																																																																																																																										          <span class="cv-what"><strong>Benefits Administrator</strong><span>HVHC Inc. · Visionworks</span></span>
-																																																																																																																																																												        </div>
-																																																																																																																																																														    </div>
-																																																																																																																																																															  </div>
-																																																																																																																																																															  </section>
-																																																																																																																																																															  <section class="blk">
-																																																																																																																																																															    <div class="wrap narrow">
-																																																																																																																																																																    <p class="sec-label">The other half</p>
-																																																																																																																																																																	    <h2 class="hd">I write, and it isn't a hobby I mention to seem interesting.</h2>
-																																																																																																																																																																		    <p>I've been writing and performing since I was twelve, and I went to an arts high school for it. I've published two books.</p>
-																																																																																																																																																																			    <p>It shows up in the work constantly. The hardest part of this job is not the regression. It's writing the sentence that makes a director understand, in one pass, why the number they were about to plan against will not hold — without hedging it into uselessness and without overstating it into a lie.</p>
-																																																																																																																																																																				    <p><strong>That's a writing problem.</strong> Most analysts treat it as an afterthought. I don't.</p>
-																																																																																																																																																																					    <h3 class="sub">I'm also somebody's mother.</h3>
-																																																																																																																																																																						    <p>My daughter is four. She knew what sodium acetate was before she could reliably count to twenty, and she learned multiplication from a cartoon before she mastered addition, which I have decided not to worry about.</p>
-																																																																																																																																																																							    <p>She is why I learned Python at night. She is also, less romantically, why I care whether a forecast actually holds. Somebody always has to commit to the number. In my house, somebody is always me.</p>
-																																																																																																																																																																								    <figure class="portrait wide">
-																																																																																																																																																																									      <img src="images/1000028934.jpg" alt="Split screen video call: Tony Robbins on one side, Maya and her daughter on the other, hands raised" />
-																																																																																																																																																																										        <figcaption>Coached live by Tony Robbins — Unleash the Power Within, 2026</figcaption>
-																																																																																																																																																																												    </figure>
-																																																																																																																																																																													    <p>Tony Robbins coached me for over an hour, in front of several thousand people. On Zoom. My daughter was there for all of it, and at some point she put her hand up alongside mine, which I did not ask her to do.</p>
-																																																																																																																																																																														    <p>I bring it up for one reason. What he actually did was refuse to let me keep a story I had been telling myself, and make me look at what was true instead. <strong>That is the same job as the one on the rest of this site.</strong> It just costs more when the data is you.</p>
-																																																																																																																																																																															  </div>
-																																																																																																																																																																															  </section>
-																																																																																																																																																																															  <footer class="foot">
-																																																																																																																																																																															    <div class="wrap">
-																																																																																																																																																																																    <div class="foot-grid">
-																																																																																																																																																																																	      <h2>Currently open to analytics roles.</h2>
-																																																																																																																																																																																		        <div class="foot-links">
-																																																																																																																																																																																				        <a href="mailto:maison.data@outlook.com">maison.data@outlook.com</a>
-																																																																																																																																																																																						        <a href="https://www.linkedin.com/in/maya-maison" target="_blank" rel="noopener">LinkedIn</a>
-																																																																																																																																																																																								        <a href="https://github.com/maya-maison" target="_blank" rel="noopener">GitHub</a>
-																																																																																																																																																																																										      </div>
-																																																																																																																																																																																											      </div>
-																																																																																																																																																																																												      <div class="colophon">
-																																																																																																																																																																																													        <span>Sound &amp; Signal — Maya Maison</span>
-																																																																																																																																																																																															      <span>San Antonio, TX</span>
-																																																																																																																																																																																																      </div>
-																																																																																																																																																																																																	    </div>
-																																																																																																																																																																																																		</footer>
-																																																																																																																																																																																																		
-																																																																																																																																																																																																		</main>
-																																																																																																																																																																																																		</body>
-																																																																																																																																																																																																		</html>
+<section class="about-hero">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow">Maya Maison — San Antonio, TX</p>
+      <h1>I'm the analyst who asks whether the number still holds.</h1>
+      <p class="standfirst">Seven years across healthcare benefits, medical device logistics, and supply chain reporting. I came to analytics through operations, which is why I care less about the model being elegant than about it being right when someone commits to it.</p>
+    </div>
+
+    <figure class="portrait">
+      <div class="ring"><img src="images/177593378.jpeg" alt="Maya Maison" /></div>
+      <figcaption>Maya Maison</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="wrap narrow">
+    <p class="sec-label">The path</p>
+    <p>I started in benefits administration, managing enrollment and eligibility for over 10,000 associates. That job taught me what a number means on the other end of a screen, because the person on the other end was calling me about it.</p>
+    <p>From there: healthcare account analytics at West Corporation, where I learned seasonalized index forecasting and RFM segmentation on accounts worth $12M a year. Then medical device logistics at SteeperUSA, where a demand analysis cut $125,000 of annual excess inventory and a compliance failure would have meant a recalled prosthetic, not a missed target.</p>
+    <p>Today I'm an Omnichannel Analyst at Mattress Firm, owning enterprise carrier invoicing and GL coding, the vendor SLA compliance program, and the Power BI reporting that goes to supply chain directors on a fixed cadence.</p>
+    <p><strong>The through-line is operations.</strong> I have never had the luxury of an analysis nobody acts on. Somebody ships against it, orders inventory to it, or takes a deduction because of it. That is why I test whether a finding survives before I present it, and why I will tell you when it doesn't.</p>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="wrap narrow">
+    <p class="sec-label">What I work in</p>
+    <div class="stack">
+      <div>
+        <h4>Analysis</h4>
+        <ul>
+          <li>Python — Pandas, NumPy, Matplotlib</li>
+          <li>SQL — CTEs, joins, window functions</li>
+          <li>Google BigQuery</li>
+          <li>Time series &amp; seasonal index forecasting</li>
+          <li>Statistical testing</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reporting &amp; BI</h4>
+        <ul>
+          <li>Power BI, DAX, Power Query</li>
+          <li>Executive KPI reporting</li>
+          <li>Advanced Excel</li>
+          <li>Requirements gathering</li>
+          <li>Process documentation &amp; SOPs</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Domain</h4>
+        <ul>
+          <li>Healthcare benefits &amp; eligibility</li>
+          <li>HIPAA compliance</li>
+          <li>Vendor SLA &amp; compliance programs</li>
+          <li>EDI — 850, 855, 856, 810</li>
+          <li>Financial coding &amp; cost allocation</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Study</h4>
+        <ul>
+          <li>M.S. Artificial Intelligence — in progress</li>
+          <li>Udacity / Woolf University</li>
+          <li>Business Analyst Nanodegree, 2024</li>
+          <li>Digital Marketing Nanodegree, 2024</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="wrap narrow">
+    <p class="sec-label">Where I've been</p>
+    <div class="cv">
+      <div class="cv-row">
+        <span class="cv-when">2024 — present</span>
+        <span class="cv-what"><strong>Omnichannel Analyst</strong><span>Mattress Firm · Remote</span></span>
+      </div>
+      <div class="cv-row">
+        <span class="cv-when">2018 — 2022</span>
+        <span class="cv-what"><strong>Logistics Analyst</strong><span>SteeperUSA · Prosthetics &amp; orthotics</span></span>
+      </div>
+      <div class="cv-row">
+        <span class="cv-when">2016 — 2018</span>
+        <span class="cv-what"><strong>Business Support Specialist</strong><span>West Corporation · Healthcare Division</span></span>
+      </div>
+      <div class="cv-row">
+        <span class="cv-when">2013 — 2015</span>
+        <span class="cv-what"><strong>Benefits Administrator</strong><span>HVHC Inc. · Visionworks</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="wrap narrow">
+    <p class="sec-label">The other half</p>
+    <h2 class="hd">I write, and it isn't a hobby I mention to seem interesting.</h2>
+    <p>I've been writing and performing since I was twelve, and I went to an arts high school for it. I've published two books.</p>
+    <p>It shows up in the work constantly. The hardest part of this job is not the regression. It's writing the sentence that makes a director understand, in one pass, why the number they were about to plan against will not hold — without hedging it into uselessness and without overstating it into a lie.</p>
+    <p><strong>That's a writing problem.</strong> Most analysts treat it as an afterthought. I don't.</p>
+
+    <h3 class="sub">I'm also somebody's mother.</h3>
+    <p>My daughter is four. She knew what sodium acetate was before she could reliably count to twenty, and she learned multiplication from a cartoon before she mastered addition, which I have decided not to worry about.</p>
+    <p>She is why I learned Python at night. She is also, less romantically, why I care whether a forecast actually holds. Somebody always has to commit to the number. In my house, somebody is always me.</p>
+
+    <figure class="portrait wide">
+      <img src="images/1000028934.jpg" alt="Split screen video call: Tony Robbins on one side, Maya and her daughter on the other, hands raised" />
+      <figcaption>Coached live by Tony Robbins — Unleash the Power Within, 2026</figcaption>
+    </figure>
+
+    <p>Tony Robbins coached me for over an hour, in front of several thousand people. On Zoom. My daughter was there for all of it, and at some point she put her hand up alongside mine, which I did not ask her to do.</p>
+    <p>I bring it up for one reason. What he actually did was refuse to let me keep a story I had been telling myself, and make me look at what was true instead. <strong>That is the same job as the one on the rest of this site.</strong> It just costs more when the data is you.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <h2>Currently open to analytics roles.</h2>
+      <div class="foot-links">
+        <a href="mailto:maison.data@outlook.com">maison.data@outlook.com</a>
+        <a href="https://www.linkedin.com/in/maya-maison" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/maya-maison" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>Sound &amp; Signal — Maya Maison</span>
+      <span>San Antonio, TX</span>
+    </div>
+  </div>
+</footer>
+
+</main>
+</body>
+</html>
